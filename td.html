@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trainer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav.desktop-nav {
+            background: #111;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav.desktop-nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        header {
+            background: #111;
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .caption {
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 4rem 1rem;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .contact a {
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            margin: 1rem;
+            font-weight: 600;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #samples-section .gallery-item .caption {
+            font-weight: normal;
+        }
+
+        /* Mobile Navigation Styles */
+        .mobile-nav {
+            display: none;
+            background: #111;
+            color: #fff;
+            padding: 1rem;
+            text-align: right;
+            position: relative;
+        }
+
+        .hamburger {
+            display: block;
+            cursor: pointer;
+            width: 30px;
+            height: 21px;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            transform: translateY(-50%);
+        }
+
+        .hamburger div {
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            top: 3.5rem;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 1rem 0;
+            z-index: 10;
+        }
+
+        .nav-links.open {
+            display: flex;
+        }
+
+        .nav-links a {
+            padding: 0.7rem 1rem;
+            margin: 0;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            nav.desktop-nav {
+                display: none;
+            }
+
+            nav.mobile-nav {
+                display: block;
+            }
+
+            header {
+                padding-top: 5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="desktop-nav">
+        <a href="#home">Home</a>
+        <a href="#description">Description</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#samples">Samples</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <nav class="mobile-nav">
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#description">Description</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#samples">Samples</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header id="home">
+        <h1>Insturctor Tadele</h1>
+        <p>Certified Fitness Trainer | 17+ Years of Experience</p>
+    </header>
+
+    <section id="description" class="fade-in">
+        <div class="section-title">About Tadele Workineh</div>
+        <p>
+            With over 17 years of experience in the fitness and wellness industry, Tadele Workineh is a results-driven personal trainer known for his holistic, client-centered approach. He has successfully worked with a wide range of clients—from beginners to elite professionals—helping them achieve transformative results through personalized fitness, clinical guidance, and nutritional support.
+
+            Tadele holds more than 35 certifications across disciplines including strength training, clinical fitness, rehabilitation, sports performance, and nutrition coaching. His in-depth knowledge allows him to blend science-backed training with practical lifestyle solutions, offering clients a complete wellness experience.
+
+            In addition to his fitness credentials, Tadele holds a degree in Social Anthropology from Rift Valley University, which enriches his understanding of individual behavior, motivation, and the cultural aspects of health and wellness. This unique academic background enhances his ability to connect with clients on a deeper level and support lasting behavioral change.
+
+            Tadele’s professional journey includes working with premier institutions such as the Rori Hotel, delivering high-quality training to an exclusive clientele. With his unmatched expertise, motivational coaching style, and commitment to excellence, Tadele Workineh stands out as a trusted leader in fitness, health, and personal transformation.
+        </p>
+    </section>
+
+    <section id="certifications" class="fade-in">
+        <div class="section-title">Certifications</div>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/cert (1).jpg" alt="Certification 1">
+                <div class="caption">Certification 1</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (2).jpg" alt="Certification 2">
+                <div class="caption">Certification 2</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (3).jpg" alt="Certification 3">
+                <div class="caption">Certification 3</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (4).jpg" alt="Certification 4">
+                <div class="caption">Certification 4</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (5).jpg" alt="Certification 5">
+                <div class="caption">Certification 5</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (6).jpg" alt="Certification 6">
+                <div class="caption">Certification 6</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (7).jpg" alt="Certification 7">
+                <div class="caption">Certification 7</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (8).jpg" alt="Certification 8">
+                <div class="caption">Certification 8</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (9).jpg" alt="Certification 9">
+                <div class="caption">Certification 9</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (10).jpg" alt="Certification 10">
+                <div class="caption">Certification 10</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (11).jpg" alt="Certification 11">
+                <div class="caption">Certification 11</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (12).jpg" alt="Certification 12">
+                <div class="caption">Certification 12</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (13).jpg" alt="Certification 13">
+                <div class="caption">Certification 13</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (14).jpg" alt="Certification 14">
+                <div class="caption">Certification 14</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (15).jpg" alt="Certification 15">
+                <div class="caption">Certification 15</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (16).jpg" alt="Certification 16">
+                <div class="caption">Certification 16</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (17).jpg" alt="Certification 17">
+                <div class="caption">Certification 17</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (18).jpg" alt="Certification 18">
+                <div class="caption">Certification 18</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (19).jpg" alt="Certification 19">
+                <div class="caption">Certification 19</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (20).jpg" alt="Certification 20">
+                <div class="caption">Certification 20</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (21).jpg" alt="Certification 21">
+                <div class="caption">Certification 21</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (22).jpg" alt="Certification 22">
+                <div class="caption">Certification 22</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (23).jpg" alt="Certification 23">
+                <div class="caption">Certification 23</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (24).jpg" alt="Certification 24">
+                <div class="caption">Certification 24</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (25).jpg" alt="Certification 25">
+                <div class="caption">Certification 25</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (26).jpg" alt="Certification 26">
+                <div class="caption">Certification 26</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cert (27).jpg" alt="Certification 27">
+                <div class="caption">Certification 27</div>
+            </div>
+             <div class="gallery-item">
+                <img src="images/cert (28).jpg" alt="Certification 28">
+                <div class="caption">Certification 28</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="samples" class="fade-in">
+        <div class="section-title">Sample Photos</div>
+        <div class="gallery" id="samples-section">
+            <div class="gallery-item">
+                <img src="images/sample (1).jpg" alt="Sample Training Session 1">
+                <div class="caption">Training Session</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sample (2).jpg" alt="Sample Meal Prep">
+                <div class="caption">Training Session</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sample (3).jpg" alt="Client Transformation">
+                <div class="caption">Training Session</div>
+            </div>
+             <div class="gallery-item">
+                <img src="images/sample (4).jpg" alt="Fitness Class">
+                <div class="caption">Training Session</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sample (6).jpg" alt="Strength Training">
+                <div class="caption">Training Session</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sample (7).jpg" alt="Sample Training Session 2">
+                <div class="caption">Training Session</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sample (8).jpg" alt="Another Meal Prep Example">
+                <div class="caption">Training Session</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sample (9).jpg" alt="Client Progress">
+                <div class="caption">Training Session</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sample (10).jpg" alt="Yoga Session">
+                <div class="caption">Training Session</div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="section-title">Contact</div>
+        <div class="contact">
+            <a href="tel:+251916146951">📞 +251 91 614 6951</a>
+            <a href="https://www.instagram.com/mastertadele" target="_blank">📷 Instagram: @mastertadele</a>
+            <a href="https://www.tiktok.com/@master_tadele" target="_blank">🎵 TikTok: @master_tadele</a>
+        </div>
+    </footer>
+
+    <script>
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        fadeEls.forEach(el => observer.observe(el));
+
+        // JavaScript for Hamburger Menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            hamburger.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
